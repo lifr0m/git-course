@@ -7,5 +7,5 @@ jobs:
   test:
     runs-on: windows-latest
     steps:
-      - run: '"123" | Out-File -Encoding UTF8 e.bat'
+      - run: 'echo "echo 12321" > e.bat'
       - run: .\e.bat
