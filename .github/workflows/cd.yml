@@ -1,0 +1,30 @@
+name: CD
+
+on:
+  push:
+    tags:
+      - v*.*.*
+
+jobs:
+  build-mac:
+    runs-on: ubuntu-latest
+    steps:
+      - run: touch roi-user-backend.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build-mac
+          path: roi-user-backend.zip
+  release:
+    runs-on: ubuntu-latest
+    needs:
+      - build-mac
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: build-mac
+          path: roi-user-backend-mac.zip
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            roi-user-backend-mac.zip
+
