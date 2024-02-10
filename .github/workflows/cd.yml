@@ -23,7 +23,7 @@ jobs:
       - myjob
     steps:
       - uses: actions/download-artifact@v4
-      - run: ls
+      - run: ls -las
       - uses: softprops/action-gh-release@v1
         with:
           files: |
