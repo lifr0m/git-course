@@ -23,12 +23,8 @@ jobs:
       - myjob
     steps:
       - uses: actions/download-artifact@v4
-        with:
-          name: filename
-      - run: echo 'Second' > other.txt
       - run: ls
       - uses: softprops/action-gh-release@v1
         with:
           files: |
             myfile.txt
-            other.txt
