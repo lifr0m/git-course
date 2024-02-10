@@ -12,7 +12,8 @@ jobs:
   myjob:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Hello' > myfile.txt
+      - run: echo 'File 1 content' > file1.txt
+      - run: echo 'File 2 content' > file2.txt
       - uses: actions/upload-artifact@v4
         with:
           path: file1.txt
