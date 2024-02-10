@@ -16,9 +16,11 @@ jobs:
       - run: echo 'File 2 content' > file2.txt
       - uses: actions/upload-artifact@v4
         with:
+          name: file1.txt
           path: file1.txt
       - uses: actions/upload-artifact@v4
         with:
+          name: file2.txt
           path: file2.txt
   release:
     runs-on: ubuntu-latest
