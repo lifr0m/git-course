@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   my-job:
-    runs-on: macos-latest
+    runs-on: windows-latest
     steps:
 #      - uses: actions/setup-python@v5
 #        with:
