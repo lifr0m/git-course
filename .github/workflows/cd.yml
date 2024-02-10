@@ -33,4 +33,4 @@ jobs:
           merge-multiple: true
       - uses: softprops/action-gh-release@v1
         with:
-          files: *
+          files: '*'
