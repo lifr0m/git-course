@@ -33,5 +33,5 @@ jobs:
           merge-multiple: true
       - uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.sha }}
+          tag_name: ${{ github.run_id }}
           files: '*'
